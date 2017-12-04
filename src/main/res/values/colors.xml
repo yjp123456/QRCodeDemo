@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="background_first_color">#ffffffff</color>
+    <color name="text_normal_color">#e02b3a68</color>
+    <color name="text_divider_color">#142b3a68</color>
+    <color name="text_light_color">#8f2b3a68</color>
+    <color name="text_warning_color">#ff0000</color>
+    <color name="dialog_cancel_button_color">#106082e6</color>
+    <color name="text_normal_bright_color">#ffffffff</color>
+</resources>

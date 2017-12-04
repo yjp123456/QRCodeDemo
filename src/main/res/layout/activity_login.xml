@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginRight="16.0dip"
+        android:layout_marginTop="4.0dip"
+        android:gravity="center_vertical"
+        android:hint="@string/username"
+        android:textColor="@color/text_light_color"
+        android:textSize="16.0sp" />
+
+    <EditText
+        android:id="@+id/pwd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginRight="16.0dip"
+        android:layout_marginTop="4.0dip"
+        android:gravity="center_vertical"
+        android:inputType="textPassword"
+        android:hint="@string/password"
+        android:textColor="@color/text_light_color"
+        android:textSize="16.0sp" />
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4.0dip"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginRight="16.0dip"
+        android:layout_marginTop="4.0dip"
+        android:gravity="center_vertical"
+        android:lineSpacingExtra="8.0dip"
+        android:text=""
+        android:visibility="gone"
+        android:textColor="@color/text_warning_color"
+        android:textSize="16.0sp" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginTop="20dip"
+        android:layout_marginLeft="16.0dip"
+        android:layout_marginRight="16.0dip"
+        android:background="@drawable/button"
+        android:gravity="center"
+        android:text="@string/login"
+        android:textAllCaps="false"
+        android:textColor="@color/text_normal_bright_color"
+        android:textSize="@dimen/dialog_button_text_size" />
+
+</LinearLayout>
