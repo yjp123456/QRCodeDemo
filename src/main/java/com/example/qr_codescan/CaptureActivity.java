@@ -175,7 +175,7 @@ public class CaptureActivity extends Activity implements Callback {
                         if (photo_path == null) {
                             photo_path = Utils.getPath(getApplicationContext(),
                                     data.getData());
-                            Log.i("123path  MyUtils", photo_path);
+                            Log.i("123path  SecurityUtil", photo_path);
                         }
                         Log.i("123path", photo_path);
 

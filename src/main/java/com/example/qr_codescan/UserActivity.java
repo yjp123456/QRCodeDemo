@@ -27,7 +27,7 @@ import com.adapter.OperationAdapter;
 import com.objects.Operation;
 import com.objects.User;
 import com.security.Constants;
-import com.security.MyUtils;
+import com.security.SecurityUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -168,7 +168,7 @@ public class UserActivity extends Activity {
             }
         });
 
-        String[] operator = MyUtils.getOperator(context);
+        String[] operator = SecurityUtil.getOperator(context);
         operatorName = operator[0];
         shop = operator[1];
 
@@ -212,7 +212,7 @@ public class UserActivity extends Activity {
                         return true;
                     }
                 });
-                conn.setSSLSocketFactory(MyUtils.getSSLSocket(context));
+                conn.setSSLSocketFactory(SecurityUtil.getSSLSocket(context));
                 conn.setConnectTimeout(3 * 1000);
                 conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
                 conn.setRequestProperty("Accept", "application/json");

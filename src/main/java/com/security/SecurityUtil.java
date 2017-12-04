@@ -21,7 +21,7 @@ import javax.net.ssl.TrustManager;
  * Created by jieping_yang on 2017/7/11.
  */
 
-public class MyUtils {
+public class SecurityUtil {
     public static final String SHARED_PREFERENCES = "shared_preferences";
 
     public static SSLSocketFactory getSSLSocket(Context context) {

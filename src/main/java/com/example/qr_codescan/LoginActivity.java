@@ -3,7 +3,6 @@ package com.example.qr_codescan;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ShortcutManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -16,7 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.security.Constants;
-import com.security.MyUtils;
+import com.security.SecurityUtil;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -50,7 +49,7 @@ public class LoginActivity extends Activity {
                 if (msg.what == 0) {
                     warning.setText("网络异常");
                     warning.setVisibility(View.VISIBLE);
-                   /* MyUtils.saveOperator(userName.getText().toString().trim(), context);
+                   /* SecurityUtil.saveOperator(userName.getText().toString().trim(), context);
                     Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();*/
@@ -62,7 +61,7 @@ public class LoginActivity extends Activity {
                     int error_code = result.getInt("error_code");
                     if (error_code == 0) {
                         Constants.cookie = result.getString("cookie");
-                        MyUtils.saveOperator(userName.getText().toString().trim(), result.getString("shop"), context);
+                        SecurityUtil.saveOperator(userName.getText().toString().trim(), result.getString("shop"), context);
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         startActivity(intent);
                         finish();
@@ -119,7 +118,7 @@ public class LoginActivity extends Activity {
                 }
             }
         });
-        final String operator = MyUtils.getOperator(context)[0];
+        final String operator = SecurityUtil.getOperator(context)[0];
         if (Constants.cookie != null && operator != null) {
             new Thread() {
                 public void run() {
@@ -151,7 +150,7 @@ public class LoginActivity extends Activity {
                         return true;
                     }
                 });
-                conn.setSSLSocketFactory(MyUtils.getSSLSocket(context));
+                conn.setSSLSocketFactory(SecurityUtil.getSSLSocket(context));
                 conn.setConnectTimeout(3 * 1000);
                 conn.setRequestProperty("Content-Type", "application/json; charset=UTF-8");
                 conn.setRequestProperty("Accept", "application/json");
